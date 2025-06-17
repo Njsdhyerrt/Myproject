@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #181818;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-layout {
+    flex: 1;
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background: #121212;
+    padding: 40px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0 0 0 32px;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar li {
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.sidebar a:hover {
+    color: #1db954;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+}
+
+.content {
+    background: #282828;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+    min-width: 350px;
+    max-width: 600px;
+    width: 100%;
+}
+
+header {
+    background: #121212;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #1db954;
+}
+
+footer {
+    background: #121212;
+    text-align: center;
+    padding: 16px 0;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+.flex-container {
+
+  display: flex;
+  
+
+  flex-flow: row wrap;
+  
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+  
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex-item {
+  background: darkgray;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: right;
+}
+
+.playlist-row {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 32px;
+    justify-content: flex-start;
+}
+/* ...existing code... */
+
+.playlist-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 32px;
+    justify-items: center;
+    align-items: stretch;
+}
+
+/* Use flexbox inside each card for content alignment */
+.playlist-card,
+.playlist-card2 {
+    background: #222;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+
+.fake-cover {
+    width: 140px;
+    height: 140px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #1db954 60%, #282828 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.music-note {
+    font-size: 2.5rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.playlist-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.now-playing-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 80px;
+    background: #181818;
+    border-top: 1px solid #282828;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    z-index: 100;
+}
+
+.now-playing-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.now-playing-cover {
+    width: 56px;
+    height: 56px;
+    background: #282828;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.now-playing-cover .music-note {
+    font-size: 2rem;
+    opacity: 0.7;
+}
+
+.now-playing-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.now-playing-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.now-playing-artist {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+.now-playing-center {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.player-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.player-btn:hover {
+    color: #1db954;
+}
+
+.now-playing-right {
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    width: 100px;
+}
+
