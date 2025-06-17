@@ -16,7 +16,7 @@
       margin: 0;
       color: black;
     }
-
+i
     .container {
       background-color: #fce7c1;
       padding: 40px;
@@ -79,37 +79,33 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>Simple Counter App in JavaScript</h1>
-    <div class="counter-box">
-      <button class="minus">−</button>
-      <div class="counter" id="counter">0</div>
-      <button class="plus">+</button>
+  
+    <div class="container">
+        <h1>Simple Counter App in JavaScript</h1>
+        <div class="counter-box">
+            <button class="minus">−</button>
+            <div class="counter" id="counter">0</div>
+            <button class="plus">+</button>
+        </div>
+    
     </div>
-    <div class="bonus">
-      <label for="step">Step: </label>
-      <input type="number" id="step" value="1" min="1" />
-    </div>
-  </div>
-l
-  <script>
+
+    <script>
     let count = 0;
 
     const counterEl = document.getElementById("counter");
-    const stepInput = document.getElementById("step");
 
     document.querySelector(".plus").addEventListener("click", () => {
-      const step = parseInt(stepInput.value) || 1;
-      count += step;
-      counterEl.textContent = count;
+        count += 1;
+        counterEl.textContent = count;
     });
 
     document.querySelector(".minus").addEventListener("click", () => {
-      const step = parseInt(stepInput.value) || 1;
-      count -= step;
-      counterEl.textContent = count;
+        count -= 1;
+        counterEl.textContent = count;
     });
-  </script>
+    </script>
+
 
 </body>
 </html>
