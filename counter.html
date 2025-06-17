@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Counter</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: black;
+    }
+
+    .container {
+      background-color: #fce7c1;
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+
+    .counter-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .minus, .plus {
+      background-color: #94fdf1;
+    }
+
+    .counter {
+      background-color: #facc15;
+      width: 80px;
+      height: 80px;
+      font-size: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+    }
+
+    input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .bonus {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simple Counter App in JavaScript</h1>
+    <div class="counter-box">
+      <button class="minus">−</button>
+      <div class="counter" id="counter">0</div>
+      <button class="plus">+</button>
+    </div>
+    <div class="bonus">
+      <label for="step">Step: </label>
+      <input type="number" id="step" value="1" min="1" />
+    </div>
+  </div>
+l
+  <script>
+    let count = 0;
+
+    const counterEl = document.getElementById("counter");
+    const stepInput = document.getElementById("step");
+
+    document.querySelector(".plus").addEventListener("click", () => {
+      const step = parseInt(stepInput.value) || 1;
+      count += step;
+      counterEl.textContent = count;
+    });
+
+    document.querySelector(".minus").addEventListener("click", () => {
+      const step = parseInt(stepInput.value) || 1;
+      count -= step;
+      counterEl.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
